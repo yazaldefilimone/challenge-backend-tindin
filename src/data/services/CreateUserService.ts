@@ -1,11 +1,11 @@
-import { ICreateUserUseCase } from "../../domain/use-cases";
-import { IUserRepository } from '../../data/contracts';
-import { userDTO } from '../../data/dtos';
-import { InvalideParamsError, AlreadyExists } from "../../domain/errors"
+import { ICreateUserUseCase } from "@/domain/use-cases";
+import { IUserRepository } from '@/data/contracts';
+import { userDTO } from '@/data/dtos';
+import { InvalideParamsError, AlreadyExists } from "@/domain/errors"
 
 
-import { isValidName, isValidEmail, isValidPassword } from '../../shared/validators';
-import { Either, left, right } from '../../shared/error-handler/either';
+import { isValidName, isValidEmail, isValidPassword } from '@/shared/validators';
+import { Either, left, right } from '@/shared/error-handler/either';
 
 
 export class CreateUserService implements ICreateUserUseCase{
