@@ -1,4 +1,4 @@
-import 'module-alias';
+import 'module-alias/register';
 
 import app from '@/main/config/app';
 import { env } from '@/shared/env';
