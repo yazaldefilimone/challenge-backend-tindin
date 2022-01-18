@@ -13,7 +13,7 @@ export class FakeUserRepository implements IUserRepository{
     return this.database;
   }
 
-  async findByEmail (email: string) : Promise<userDTO | null>{
+  async findByEmail (email: string) : Promise<userDTO | undefined>{
     const userOrNull = this.database.find(user => user.email === email);
 
     return userOrNull
