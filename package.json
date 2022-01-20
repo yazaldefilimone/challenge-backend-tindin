@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "scripts":{
-    "dev": "ts-node -r tsconfig-paths ./src/main/server.ts"
+  "scripts": {
+    "build": "tsc && node ./dist/main/server.js",
+    "dev": "ts-node-dev ./src/main/server.ts",
+    "dev:test": "jest"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -13,7 +15,10 @@
     "express": "^4.17.2",
     "joi": "^17.5.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.6"
+    "mongoose": "^5.9.6",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.4",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
@@ -23,13 +28,11 @@
     "@types/jsonwebtoken": "^8.5.7",
     "@types/mongoose": "^5.11.97",
     "@types/node": "^17.0.8",
+    "@types/uuid": "^8.3.4",
     "module-alias": "^2.2.2",
     "tsconfig-paths": "^3.12.0"
   },
-  "engines": {
-    "node": "12.x"
-  },
   "_moduleAliases": {
-    "@": "dist"
+    "@": "dist/"
   }
 }

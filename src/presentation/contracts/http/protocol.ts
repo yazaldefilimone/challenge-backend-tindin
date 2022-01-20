@@ -1,4 +1,4 @@
-import { httpResponse } from '../../../presentation/contracts/http';
+import { httpResponse } from "@/presentation/contracts/http"
 
 export const ok = (body: any): httpResponse => {
   return {

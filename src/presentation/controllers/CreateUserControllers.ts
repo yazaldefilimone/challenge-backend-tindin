@@ -13,7 +13,7 @@ export class CreateUserController implements IController{
     const userOrError = await this.createUserUseCase.execute({ name, email, password });
 
     if(userOrError.isLeft()){
-      return badRequest(userOrError.value);
+      return badRequest(userOrError.value.message);
     }
 
     return create(userOrError.value);

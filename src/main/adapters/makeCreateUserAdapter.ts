@@ -1,11 +1,11 @@
 import { CreateUserService } from '../../data/services';
-import {  FakeUserRepository } from '../../infra/repositories';
+import {  UserRepository } from '../../infra/repositories';
 import {  CreateUserController } from '../../presentation/controllers'
 import { IController } from '../../presentation/contracts'
 
 const makeCreateUserAdapter = () :IController=> {
-  const fakeUserRepository = new FakeUserRepository();
-  const createUserService  = new CreateUserService(fakeUserRepository);
+  const userRepository = new UserRepository();
+  const createUserService  = new CreateUserService(userRepository);
   const createUserController = new CreateUserController(createUserService);
 
   return createUserController
